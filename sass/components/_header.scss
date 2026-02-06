@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+header {
+    text-align: center;
+    border-bottom: 2px solid $sw-yellow;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+    h1 {
+        color: $sw-yellow;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
