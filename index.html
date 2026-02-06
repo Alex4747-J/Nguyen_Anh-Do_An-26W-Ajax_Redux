@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Character Guide</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="grid-con">
+            <div class="col-span-full">
+                <h1>Star Wars Character's Directory</h1>
+                <p>Explore the characters and their cinematic journeys.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Character List Section using grid.css -->
+        <section id="list-section">
+            <h2 class="hidden">Character List</h2>
+            <ul id="character-list" class="grid-con">
+                <!-- Characters injected via JS with grid.css column classes -->
+            </ul>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loader" class="hidden">
+            <img src="images/spinner.svg" alt="Loading...">
+        </div>
+
+        <!-- Movie Info Section using grid.css -->
+        <section id="movie-info" class="grid-con">
+            <h2 class="hidden">Main Directory</h2>
+            <div id="movie-con" class="col-span-full">
+                <p class="placeholder-text">Select a character above to reveal their movie details.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="grid-con">
+        <div class="col-span-full">
+            <p>&copy; 2025 Star Wars Character Guide &mdash; Powered by <a href="https://swapi.info" target="_blank">SWAPI</a></p>
+        </div>
+    </footer>
+
+    <!-- HTML Template element (assignment requirement) -->
+    <template id="movie-template">
+        <div class="movie-container grid-con">
+            <div class="movie-container__poster col-span-full m-col-span-4 l-col-span-3">
+                <img src="" alt="" class="movie-container__img">
+            </div>
+            <div class="movie-container__details col-span-full m-col-span-8 l-col-span-9">
+                <h3 class="movie-container__title"></h3>
+                <p class="movie-container__characters"></p>
+                <p class="movie-container__crawl"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
