@@ -1,5 +1,5 @@
 # Star Wars Character & Movie Guide
-An interactive web application that allows users to explore the Star Wars universe by connecting characters to their cinematic debuts. Built as a collaborative project for the [Insert Course Name, e.g., Web Development II] program.
+An interactive web application that allows users to explore the Star Wars universe by connecting characters to their cinematic debuts. Built as a collaborative project for the Interactive Media Design level 4 program.
 
 ## 👥 Collaborators
 Anh Nguyen - Lead Developer / Logic & API Integration
