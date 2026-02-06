@@ -1,0 +1,102 @@
+@use '../abstracts' as *;
+
+body {
+    background-color: $sw-black;
+    color: white;
+    font-family: $font-stack;
+    margin: 0;
+    padding: 20px;
+}
+
+
+// Character List — visual styling only (grid layout handled by grid.css classes)
+#character-list {
+    list-style: none;
+    padding: 0;
+    row-gap: 15px;
+
+    li {
+        background-color: $sw-grey;
+        border: 1px solid #333;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            border-color: $sw-yellow;
+        }
+
+        &.active {
+            border-color: $sw-yellow;
+            background-color: rgba(255, 232, 31, 0.08);
+
+            a {
+                color: $sw-yellow;
+            }
+        }
+
+        // Highlight characters that appear in the currently displayed film
+        &.in-film {
+            border-color: $sw-yellow;
+            background-color: rgba(255, 232, 31, 0.1);
+
+            a {
+                color: $sw-yellow;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Movie Section
+#movie-info {
+    margin-top: 50px;
+    padding: 20px 0;
+    min-height: 200px;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 60px 20px;
+}
+
+// Loading Spinner Overlay
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.error-msg {
+    color: #ff6b6b;
+    text-align: center;
+    border: 1px solid #ff6b6b;
+    padding: 20px;
+    border-radius: 8px;
+}
